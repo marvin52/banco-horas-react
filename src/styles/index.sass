@@ -4,10 +4,112 @@
 html, body
   background: white;
   font-family: 'Abel', sans-serif;
+  padding: 0px
+  margin: 0px
+
+*:root *:not(.react-datepicker-wrapper *)
+  box-sizing: border-box
 
 ul
   padding: 0px 8px
 
 
-p
+p, h3
   display: block
+  width: 100%
+
+#banco__title-start,
+#banco__title-end
+  width: 100%
+  text-align: center
+
+
+#banco__title-start + div,
+#banco__title-end + div
+  display: block
+  width: 100%
+  & > div, .react-datepicker__input-container
+    width: 100%
+
+.banco__btn-wrapper
+  display: block
+
+  button
+    width: calc(100% / 3)
+    height: 30px
+    margin-top: 2px
+    display: inline-block
+    box-sizing: border-box
+    border: 0px
+    cursor: pointer
+    background: transparent
+    border-bottom: 1px solid transparent
+    &:hover
+      border-bottom: 1px solid #ccc
+
+.react-datepicker-wrapper input
+  width: 100%
+  border: 0px
+  border-bottom: 1px solid #ccc
+  box-sizing: border-box
+  height: 30px
+  text-align: center
+
+$green : hsla(100%, 50%, 30, 1)
+
+.banco__btn-save
+  cursor: pointer
+  width: 100%
+  height: 50px
+  border: 1px solid $green
+  color: $green
+  background: white
+  margin-top: 20px
+  font-size: 16px
+
+  &:hover
+    border: 1px solid $green
+    background: $green
+    color: white
+
+h2
+  width: 100%
+  border: 1px solid $green
+  color: $green
+  text-align: center
+  height: 40px
+  line-height: 40px
+.banco__sidebar
+  width: 200px
+.banco__sidebar,
+.banco__container
+  display: inline-block
+  float: left
+  padding: 0px 5px
+  box-sizing: border-box !important
+.banco__container
+  width: calc(100% - 200px)
+
+.banco__hours-table
+  border-collapse: collapse
+  width: 100%
+
+  &, th, td
+    border: 1px solid #ccc
+    padding: 5px 10px
+    text-align: center
+
+  tbody tr:nth-child(even)
+    background-color: #f2f2f2
+  thead td
+    border: 1px solid #666
+  thead tr
+    background-color: #666
+    color: white
+    font-weight: bolder
+
+
+.banco__saldo-positivo
+  color: green
+.banco__saldo-negativo
+  color: red
